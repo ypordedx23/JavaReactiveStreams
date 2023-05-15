@@ -42,4 +42,10 @@ public class ReactiveSources {
                 new User(7, "Michael","Ortiz")
         ).delayElements(Duration.ofSeconds(1));
     }
+
+    public static Mono<User> userMono(){
+        return Mono.just(new User(1,"Jose","Moreano"))
+                .delayElement(Duration.ofSeconds(1));
+    }
+
 }
