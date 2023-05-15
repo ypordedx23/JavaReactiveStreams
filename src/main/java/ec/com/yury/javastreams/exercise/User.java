@@ -34,4 +34,13 @@ public class User {
         this.userName = userName;
         this.userLastName = userLastName;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "number=" + number +
+                ", userName='" + userName + '\'' +
+                ", userLastName='" + userLastName + '\'' +
+                '}';
+    }
 }
