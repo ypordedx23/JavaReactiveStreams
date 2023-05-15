@@ -47,5 +47,4 @@ public class ReactiveSources {
         return Mono.just(new User(1,"Jose","Moreano"))
                 .delayElement(Duration.ofSeconds(1));
     }
-
 }
