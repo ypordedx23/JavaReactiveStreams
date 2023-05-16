@@ -3,6 +3,7 @@ package ec.com.yury.javastreams.exercise;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.nio.channels.MembershipKey;
 import java.time.Duration;
 
 public class ReactiveSources {
@@ -46,5 +47,10 @@ public class ReactiveSources {
     public static Mono<User> userMono(){
         return Mono.just(new User(1,"Jose","Moreano"))
                 .delayElement(Duration.ofSeconds(1));
+    }
+
+    public static Mono<String> unresponsiveMono() {
+        return Mono.just("HOLA NO RESPONDO")
+                .delayElement(Duration.ofSeconds(6));
     }
 }
