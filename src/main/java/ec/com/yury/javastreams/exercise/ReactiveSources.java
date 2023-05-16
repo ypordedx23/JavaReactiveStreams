@@ -17,6 +17,12 @@ public class ReactiveSources {
                 .delayElements(Duration.ofSeconds(1));
     }
 
+    public static  Flux<Integer>  intNumberFluxWithRepeat() {
+        return Flux.just(1,1,2,2,3,4,5,6,6,7,8,9,10)
+                .delayElements(Duration.ofSeconds(1));
+    }
+
+
     public static Flux<Integer> intNumbersFluxWithException(){
         return Flux.range(1,10)
                 .delayElements(Duration.ofSeconds(1))
@@ -47,4 +53,6 @@ public class ReactiveSources {
         return Mono.just(new User(1,"Jose","Moreano"))
                 .delayElement(Duration.ofSeconds(1));
     }
+
+
 }
